@@ -30,10 +30,8 @@ def airlinefuckery(bagcolor,rulelist,numbags):
     colorcnt = 0
     for rule in rulelist:
         if rule == bagcolor:
-            nextbag = rule
             for child in rulelist[rule]:
                 if child[1] != 'no':
-                    parentlist.append(nextbag)
                     colorcnt = int(child[1])*int(numbags)
                     newrule = (child[0],colorcnt)
                     tempparent.append(newrule)
